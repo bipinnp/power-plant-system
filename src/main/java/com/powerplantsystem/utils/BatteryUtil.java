@@ -36,9 +36,9 @@ public class BatteryUtil {
      * Create a Set of postcodes from battery list
      * @return
      */
-    private  Set<Integer> postCodes(){
-        return batteries.stream()
-                .map(Battery::getPostCode)
+    private  Set<Integer> postCodes(List<Battery> batteryList){
+        return batteryList.stream()
+                .map(Battery::getPostcode)
                 .map(Integer::parseInt)
                 .collect(Collectors.toSet());
     }
@@ -48,12 +48,12 @@ public class BatteryUtil {
      *
      * @return Set
      */
-    private Set<String> getRangeOfBattery(){
+    private Set<String> getRangeOfBattery(List<Battery> batteryList){
         return IntStream.rangeClosed(from,to)
                 .boxed()
                 .collect(Collectors.toSet())
                 .stream()
-                .filter(postCodes()::contains)
+                .filter(postCodes(batteryList)::contains)
                 .map(String::valueOf)
                 .collect(Collectors.toSet());
     }
@@ -63,9 +63,9 @@ public class BatteryUtil {
      *
      * @return List
      */
-    public List<Battery> selectedBattery() {
-        return batteries.stream()
-                .filter(battery -> getRangeOfBattery().contains(battery.getPostCode()))
+    public List<Battery> selectedBattery(List<Battery> batteryList) {
+        return batteryList.stream()
+                .filter(battery -> getRangeOfBattery(batteryList).contains(battery.getPostcode()))
                 .collect(Collectors.toList());
     }
 }

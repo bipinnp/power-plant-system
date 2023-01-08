@@ -1,0 +1,194 @@
+{
+	"info": {
+		"_postman_id": "23175882-4065-44db-b7a2-14928d9160d6",
+		"name": "POWER PLANT SYSTEM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4861993"
+	},
+	"item": [
+		{
+			"name": "Save List of Battery",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Cannington\",\r\n        \"postcode\": \"6107\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Midland\",\r\n        \"postcode\": \"6057\",\r\n        \"capacity\": 50500\r\n    },\r\n    {\r\n        \"name\": \"Hay Street\",\r\n        \"postcode\": \"6000\",\r\n        \"capacity\": 23500\r\n    },\r\n    {\r\n        \"name\": \"Mount Adams\",\r\n        \"postcode\": \"6525\",\r\n        \"capacity\": 12000\r\n    },\r\n    {\r\n        \"name\": \"Koolan Island\",\r\n        \"postcode\": \"6733\",\r\n        \"capacity\": 10000\r\n    },\r\n    {\r\n        \"name\": \"Armadale\",\r\n        \"postcode\": \"6992\",\r\n        \"capacity\": 25000\r\n    },\r\n    {\r\n        \"name\": \"Lesmurdie\",\r\n        \"postcode\": \"6076\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Kalamunda\",\r\n        \"postcode\": \"6076\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Carmel\",\r\n        \"postcode\": \"6076\",\r\n        \"capacity\": 36000\r\n    },\r\n    {\r\n        \"name\": \"Bentley\",\r\n        \"postcode\": \"6102\",\r\n        \"capacity\": 85000\r\n    },\r\n    {\r\n        \"name\": \"Akunda Bay\",\r\n        \"postcode\": \"2084\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Werrington County\",\r\n        \"postcode\": \"2747\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Bagot\",\r\n        \"postcode\": \"0820\",\r\n        \"capacity\": 27000\r\n    },\r\n    {\r\n        \"name\": \"Yirrkala\",\r\n        \"postcode\": \"0880\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"University of Melbourne\",\r\n        \"postcode\": \"3010\",\r\n        \"capacity\": 85000\r\n    },\r\n    {\r\n        \"name\": \"Norfolk Island\",\r\n        \"postcode\": \"2899\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Ootha\",\r\n        \"postcode\": \"2875\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Kent Town\",\r\n        \"postcode\": \"5067\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Northgate Mc\",\r\n        \"postcode\": \"9464\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Gold Coast Mc\",\r\n        \"postcode\": \"9729\",\r\n        \"capacity\": 50000\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/battery/saveAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"battery",
+						"saveAll"
+					]
+				},
+				"description": "API to perform bulk save operation on list of battery"
+			},
+			"response": [
+				{
+					"name": "Save List of Battery",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\": \"Cannington\",\r\n        \"postcode\": \"6107\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Midland\",\r\n        \"postcode\": \"6057\",\r\n        \"capacity\": 50500\r\n    },\r\n    {\r\n        \"name\": \"Hay Street\",\r\n        \"postcode\": \"6000\",\r\n        \"capacity\": 23500\r\n    },\r\n    {\r\n        \"name\": \"Mount Adams\",\r\n        \"postcode\": \"6525\",\r\n        \"capacity\": 12000\r\n    },\r\n    {\r\n        \"name\": \"Koolan Island\",\r\n        \"postcode\": \"6733\",\r\n        \"capacity\": 10000\r\n    },\r\n    {\r\n        \"name\": \"Armadale\",\r\n        \"postcode\": \"6992\",\r\n        \"capacity\": 25000\r\n    },\r\n    {\r\n        \"name\": \"Lesmurdie\",\r\n        \"postcode\": \"6076\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Kalamunda\",\r\n        \"postcode\": \"6076\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Carmel\",\r\n        \"postcode\": \"6076\",\r\n        \"capacity\": 36000\r\n    },\r\n    {\r\n        \"name\": \"Bentley\",\r\n        \"postcode\": \"6102\",\r\n        \"capacity\": 85000\r\n    },\r\n    {\r\n        \"name\": \"Akunda Bay\",\r\n        \"postcode\": \"2084\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Werrington County\",\r\n        \"postcode\": \"2747\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Bagot\",\r\n        \"postcode\": \"0820\",\r\n        \"capacity\": 27000\r\n    },\r\n    {\r\n        \"name\": \"Yirrkala\",\r\n        \"postcode\": \"0880\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"University of Melbourne\",\r\n        \"postcode\": \"3010\",\r\n        \"capacity\": 85000\r\n    },\r\n    {\r\n        \"name\": \"Norfolk Island\",\r\n        \"postcode\": \"2899\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Ootha\",\r\n        \"postcode\": \"2875\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Kent Town\",\r\n        \"postcode\": \"5067\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Northgate Mc\",\r\n        \"postcode\": \"9464\",\r\n        \"capacity\": 13500\r\n    },\r\n    {\r\n        \"name\": \"Gold Coast Mc\",\r\n        \"postcode\": \"9729\",\r\n        \"capacity\": 50000\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/battery/saveAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"battery",
+								"saveAll"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Jan 2023 13:12:39 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"message\": \"Batteries saved successfully\",\n    \"code\": \"200\",\n    \"data\": [\n        {\n            \"name\": \"Cannington\",\n            \"postcode\": \"6107\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Midland\",\n            \"postcode\": \"6057\",\n            \"capacity\": 50500\n        },\n        {\n            \"name\": \"Hay Street\",\n            \"postcode\": \"6000\",\n            \"capacity\": 23500\n        },\n        {\n            \"name\": \"Mount Adams\",\n            \"postcode\": \"6525\",\n            \"capacity\": 12000\n        },\n        {\n            \"name\": \"Koolan Island\",\n            \"postcode\": \"6733\",\n            \"capacity\": 10000\n        },\n        {\n            \"name\": \"Armadale\",\n            \"postcode\": \"6992\",\n            \"capacity\": 25000\n        },\n        {\n            \"name\": \"Lesmurdie\",\n            \"postcode\": \"6076\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Kalamunda\",\n            \"postcode\": \"6076\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Carmel\",\n            \"postcode\": \"6076\",\n            \"capacity\": 36000\n        },\n        {\n            \"name\": \"Bentley\",\n            \"postcode\": \"6102\",\n            \"capacity\": 85000\n        },\n        {\n            \"name\": \"Akunda Bay\",\n            \"postcode\": \"2084\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Werrington County\",\n            \"postcode\": \"2747\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Bagot\",\n            \"postcode\": \"0820\",\n            \"capacity\": 27000\n        },\n        {\n            \"name\": \"Yirrkala\",\n            \"postcode\": \"0880\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"University of Melbourne\",\n            \"postcode\": \"3010\",\n            \"capacity\": 85000\n        },\n        {\n            \"name\": \"Norfolk Island\",\n            \"postcode\": \"2899\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Ootha\",\n            \"postcode\": \"2875\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Kent Town\",\n            \"postcode\": \"5067\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Northgate Mc\",\n            \"postcode\": \"9464\",\n            \"capacity\": 13500\n        },\n        {\n            \"name\": \"Gold Coast Mc\",\n            \"postcode\": \"9729\",\n            \"capacity\": 50000\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Battery Statistics Data by postcode range",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/battery/statistics/postcodes?from=1000&to=5000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"battery",
+						"statistics",
+						"postcodes"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "1000"
+						},
+						{
+							"key": "to",
+							"value": "5000"
+						}
+					]
+				},
+				"description": "API to fetch battery statisrics data based on postcode range filter"
+			},
+			"response": [
+				{
+					"name": "Get Battery Statistics Data by postcode range",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/battery/statistics/postcodes?from=1000&to=5000",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"battery",
+								"statistics",
+								"postcodes"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "1000"
+								},
+								{
+									"key": "to",
+									"value": "5000"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 08 Jan 2023 13:13:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"OK\",\n    \"message\": \"Battery statistics data fetched successfully\",\n    \"code\": \"200\",\n    \"data\": {\n        \"totalBattery\": 5,\n        \"totalBatteryWattCapacity\": 139000,\n        \"averageWattCapacity\": 27800,\n        \"minWattCapacity\": 13500,\n        \"maxWattCapacity\": 85000,\n        \"batteries\": [\n            {\n                \"name\": \"Akunda Bay\",\n                \"postcode\": \"2084\",\n                \"capacity\": 13500\n            },\n            {\n                \"name\": \"Norfolk Island\",\n                \"postcode\": \"2899\",\n                \"capacity\": 13500\n            },\n            {\n                \"name\": \"Ootha\",\n                \"postcode\": \"2875\",\n                \"capacity\": 13500\n            },\n            {\n                \"name\": \"University of Melbourne\",\n                \"postcode\": \"3010\",\n                \"capacity\": 85000\n            },\n            {\n                \"name\": \"Werrington County\",\n                \"postcode\": \"2747\",\n                \"capacity\": 13500\n            }\n        ]\n    }\n}"
+				}
+			]
+		}
+	]
+}

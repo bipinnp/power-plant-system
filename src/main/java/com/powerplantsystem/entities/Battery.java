@@ -1,9 +1,7 @@
 package com.powerplantsystem.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,15 +24,17 @@ import javax.validation.constraints.NotBlank;
 @AllArgsConstructor
 public class Battery implements Comparable<Battery>{
     @Id
+    @Setter(AccessLevel.NONE)
+    @JsonIgnoreProperties(ignoreUnknown = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @NotBlank(message = "Name is mandatory")
     private String name;
     @NotBlank(message = "Post code is mandatory")
-    private String postCode;
+    private String postcode;
 
     @NotBlank(message = "Watt capacity is mandatory")
-    private long wattCapacity;
+    private long capacity;
 
     @Override
     public int compareTo(Battery battery) {

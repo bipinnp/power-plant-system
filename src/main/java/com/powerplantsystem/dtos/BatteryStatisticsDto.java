@@ -52,7 +52,7 @@ public class BatteryStatisticsDto {
      * @return long
      */
     private static long getTotalWattCapacity(List<Battery> batteries) {
-        return batteries.stream().mapToLong(Battery::getWattCapacity).sum();
+        return batteries.stream().mapToLong(Battery::getCapacity).sum();
     }
 
     /**
@@ -62,7 +62,7 @@ public class BatteryStatisticsDto {
      * @return double
      */
     private static double getAverageWattCapacity(List<Battery> batteries) {
-        return batteries.stream().mapToLong(Battery::getWattCapacity).average().orElse(0.0);
+        return batteries.stream().mapToLong(Battery::getCapacity).average().orElse(0.0);
     }
 
     /**
@@ -72,7 +72,7 @@ public class BatteryStatisticsDto {
      * @return long
      */
     private static long getMinCapacity(List<Battery> batteries) {
-        return batteries.stream().mapToLong(Battery::getWattCapacity).min().orElse(0L);
+        return batteries.stream().mapToLong(Battery::getCapacity).min().orElse(0L);
     }
 
     /**
@@ -82,7 +82,7 @@ public class BatteryStatisticsDto {
      * @return long
      */
     private static long getMaxCapacity(List<Battery> batteries) {
-        return batteries.stream().mapToLong(Battery::getWattCapacity).max().orElse(0L);
+        return batteries.stream().mapToLong(Battery::getCapacity).max().orElse(0L);
     }
 
     /**

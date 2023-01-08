@@ -1,5 +1,6 @@
 package com.powerplantsystem.dtos;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.powerplantsystem.entities.Battery;
 import lombok.Data;
@@ -17,10 +18,12 @@ import lombok.NoArgsConstructor;
 public class BatteryDto {
 
     private String name;
-    private String postCode;
-    private long wattCapacity;
+    private String postcode;
+    private long capacity;
 
     public static BatteryDto convertToDto(Battery battery){
-        return new ObjectMapper().convertValue(battery,BatteryDto.class);
+        return new ObjectMapper()
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                .convertValue(battery,BatteryDto.class);
     }
 }

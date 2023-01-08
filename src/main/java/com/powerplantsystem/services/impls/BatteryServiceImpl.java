@@ -5,10 +5,12 @@ import com.powerplantsystem.dtos.BatteryStatisticsDto;
 import com.powerplantsystem.entities.Battery;
 import com.powerplantsystem.repositories.BatteryRepository;
 import com.powerplantsystem.services.BatteryService;
+import com.powerplantsystem.utils.BatteryUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class BatteryServiceImpl implements BatteryService {
@@ -28,7 +30,8 @@ public class BatteryServiceImpl implements BatteryService {
      */
     @Override
     public List<BatteryDto> saveBatteries(List<Battery> batteries) {
-        return null;
+        final List<Battery> savedBatteryList = batteryRepository.saveAll(batteries);
+        return savedBatteryList.stream().map(BatteryDto::convertToDto).collect(Collectors.toList());
     }
 
     /**
@@ -40,6 +43,13 @@ public class BatteryServiceImpl implements BatteryService {
      */
     @Override
     public BatteryStatisticsDto getBatteryListByPostCodeRange(int from, int to) {
-        return null;
+        final List<Battery> allBattery = batteryRepository.findAll();
+        final BatteryUtil batteryUtil = BatteryUtil.builder()
+                .batteries(allBattery)
+                .from(from)
+                .to(to)
+                .build();
+        final List<Battery> batteryList = batteryUtil.selectedBattery(allBattery);
+        return BatteryStatisticsDto.getStatistics(batteryList);
     }
 }

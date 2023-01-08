@@ -18,5 +18,5 @@ public class ApiResponse<T> {
     private final HttpStatus status;
     private final String message;
     private final String code;
-    private T body;
+    private T data;
 }
