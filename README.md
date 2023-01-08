@@ -22,7 +22,6 @@ In-memory database (H2 database) is used in this system.
 - JDK 1.8
 - Maven 3
 - Lombok
-- Spring Doc OpenAPI
 
 # For building and running the application you need:
 - JDK 1.8
@@ -37,10 +36,6 @@ There are several ways to run a Spring Boot application on your local machine.
 - Alternatively you can use the Spring Boot Maven plugin like so:
   
   mvn spring-boot:run
-
-# API Documentation: Using Swagger UI
-URL: http://localhost:8080/swagger-ui/index.html
-
 
 # Postman Collection
 Location: ./POWER PLANT SYSTEM.postman_collection.json
